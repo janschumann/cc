@@ -1,7 +1,8 @@
 #include "card.h"
 
 int main(void) {
-    long long int cnum = get_card_number_from_stdin();
+    //long long int cnum = get_card_number_from_stdin();
+    long long int cnum = 378282246310005;
 
     if (is_valid(cnum)) {
         printf("Card type is '%s'", card_type(cnum));
@@ -43,7 +44,7 @@ int count_digets(long long int n) {
 
 bool has_valid_length(long long int n) {
     int nd = count_digets(n);
-    return nd < 13 || nd > 16;
+    return nd > 13 && nd < 16;
 }
 
 int calculate_checksum(long long int cnum) {
