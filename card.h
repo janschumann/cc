@@ -20,8 +20,10 @@ static const char MASTER[] = "MasterCard";
 static const char AMEX[] = "American Express";
 
 long long int get_card_number_from_stdin(void);
-bool has_valid_length(long long int n);
-int calculate_checksum(long long int cnum);
+int get_next_digit(long long int n);
+int get_product_of_next_digit(long long int n);
+bool is_valid_length(long long int n);
+int calculate_checksum(long long int n);
 bool is_valid(long long int cnum);
 int count_digets(long long int n);
 char * card_type(long long int cnum);
