@@ -1,5 +1,4 @@
 #include "card.h"
-#include <cs50.h>
 
 int main(void) {
     long long int cnum = get_card_number_from_stdin();
@@ -20,7 +19,7 @@ long long int get_card_number_from_stdin(void) {
 
     do {
         printf("Enter Credit-Card Number: ");
-        cnum = get_long_long();
+        scanf("%lli", &cnum);
     }
     while (cnum <= 0);
 
